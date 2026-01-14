@@ -9,8 +9,10 @@
       content="Tecnoll — Assistência técnica, desenvolvimento web e soluções digitais sob medida."
     />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="shortcut icon" href="favicon_io/favicon1.png" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    <link rel="shortcut icon" href="favicon_io/apple-touch-icon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
   </head>
   <body>
@@ -67,32 +69,32 @@
           <h2 class="center">Serviços</h2>
 
           <div class="services">
-            <article>
+            <article class="service-card" data-service="Assistência Técnica">
               <h3>Assistência Técnica</h3>
               <p>Manutenção e suporte especializado em informática.</p>
             </article>
 
-            <article>
+            <article class="service-card" data-service="Manutenção Preventiva">
               <h3>Manutenção Preventiva</h3>
               <p>Mais desempenho, menos falhas e maior vida útil.</p>
             </article>
 
-            <article>
+            <article class="service-card" data-service="Consultoria em TI">
               <h3>Consultoria em TI</h3>
               <p>Diagnóstico, orientação e soluções estratégicas.</p>
             </article>
 
-            <article>
+            <article class="service-card" data-service="Criação de Sites">
               <h3>Criação de Sites</h3>
               <p>Sites rápidos, modernos e responsivos.</p>
             </article>
 
-            <article>
+            <article class="service-card" data-service="Automações">
               <h3>Automações</h3>
               <p>Processos digitais para economizar tempo e dinheiro.</p>
             </article>
 
-            <article>
+            <article class="service-card" data-service="Integrações">
               <h3>Integrações</h3>
               <p>APIs, formulários e sistemas conectados.</p>
             </article>
@@ -103,7 +105,7 @@
       <section id="contact" class="section contact">
         <div class="container center">
           <h2>Contato</h2>
-          <p>📧 contato@tecnollservicosetecnologia.com.br</p>
+          <p>📧 vitorgomes@tecnollservicosetecnologia.com.br</p>
           <p>📞 (92) 99300-6936</p>
         </div>
       </section>
@@ -113,6 +115,31 @@
       <p>© 2026 Tecnoll. Todos os direitos reservados.</p>
     </footer>
 
+    <div class="modal-overlay" id="modal">
+      <div class="modal">
+        <button class="close-modal">&times;</button>
+
+        <h2 id="modal-title"></h2>
+        <p id="modal-description"></p>
+
+        <form id="service-form">
+          <input type="text" id="name" placeholder="Seu nome" required />
+          <input
+            type="text"
+            id="contact"
+            placeholder="Whatsapp ou E-mail"
+            required
+          />
+          <textarea
+            id="message"
+            placeholder="Descreva sua necessidade"
+            required
+          ></textarea>
+
+          <button type="submit">Enviar solicitação</button>
+        </form>
+      </div>
+    </div>
     <script src="js/script.js"></script>
   </body>
 </html>
