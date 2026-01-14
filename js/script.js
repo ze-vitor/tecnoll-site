@@ -22,8 +22,12 @@ const serviceDescriptions = {
     "Desenvolvimento de sites profissionais, rápidos e responsivos.",
   Automações:
     "Integrações e automações para otimizar processos e reduzir trabalho manual.",
-    Integrações:
-    "APIs, formulários e sistemas conectados."
+  Integrações:
+    "APIs, formulários e sistemas conectados.",
+  "Assistência Técnica":
+    "Manutenção e suporte especializado em informática.",
+  "Manutenção Preventiva":
+    "Mais desempenho, menos falhas e maior vida útil.",
 };
 
 // Abrir modal
