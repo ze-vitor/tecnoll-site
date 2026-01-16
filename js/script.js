@@ -2,7 +2,7 @@ const btn = document.querySelector(".menu-btn");
 const menu = document.querySelector(".menu");
 
 btn.addEventListener("click", () => {
-  menu.classList.toggle("open");
+  menu.classList.toggle("active");
 });
 
 /* script para formulario de solicitação */
@@ -22,12 +22,9 @@ const serviceDescriptions = {
     "Desenvolvimento de sites profissionais, rápidos e responsivos.",
   Automações:
     "Integrações e automações para otimizar processos e reduzir trabalho manual.",
-  Integrações:
-    "APIs, formulários e sistemas conectados.",
-  "Assistência Técnica":
-    "Manutenção e suporte especializado em informática.",
-  "Manutenção Preventiva":
-    "Mais desempenho, menos falhas e maior vida útil.",
+  Integrações: "APIs, formulários e sistemas conectados.",
+  "Assistência Técnica": "Manutenção e suporte especializado em informática.",
+  "Manutenção Preventiva": "Mais desempenho, menos falhas e maior vida útil.",
 };
 
 // Abrir modal
@@ -53,7 +50,8 @@ modal.addEventListener("click", (e) => {
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  const name = form.elements["name"]?.value || document.getElementById("name").value;
+  const name =
+    form.elements["name"]?.value || document.getElementById("name").value;
   const contact = form.querySelector("#contact").value;
   const message = form.querySelector("#message").value;
 
