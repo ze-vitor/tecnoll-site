@@ -67,3 +67,34 @@ ${message}
   const url = `https://wa.me/5592993006936?text=${encodeURIComponent(text)}`;
   window.open(url, "_blank");
 });
+
+const portfolioCards = document.querySelectorAll(".portfolio-card");
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = "translateY(0)";
+      }
+    });
+  },
+  { threshold: 0.2 }
+);
+
+portfolioCards.forEach((card) => {
+  card.style.opacity = 0;
+  card.style.transform = "translateY(20px)";
+  observer.observe(card);
+});
+
+// Exibe a mensagem assim que a página carrega
+const continuar = window.confirm(
+  "Este site ainda está em processo de desenvolvimento, quer conhecer mesmo assim?"
+);
+
+if (!continuar) {
+  // Se o usuário clicar em 'Cancelar' (Não), redireciona para o Google ou outra página
+  window.location.href = "https://www.google.com";
+}
+// Se clicar em 'OK' (Sim), ele continua no seu site normalmente
